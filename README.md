@@ -1,33 +1,51 @@
 # PlanetaryEphemeris
 
 
-PlanetaryEphemeris calcul les éphémérides des planetes en prenant en compte l'aberation  
+PlanetaryEphemeris calcul les éphémérides des planetes en prenant en compte l'aberation.
 
 
 ### Folder architecture
 
 * -Package Calcul 
+
    |- JD ( Calcul du Jour Julien ) 
+
    |- GreenwichPosition ( Calcul des ephemerides des planetes rapporté à Greenwich ) 
+
    |- LocalPosition ( Calcul des éphemrides des planetes rapporté à la position local (lieu d'observation) )
+
    |- Main ( Execute le calcul )
 
+
 * -Package PlanetartyData
+
    |- Earth
+
    |- Jupiter
+
    |- Mars
+
    |- Mercury
+
    |- Moon
+
    |- Neptune
+
    |- Saturn
+
    |- Uranus
+
    |- Venus
 
 ## More information about files
 Folder dans l'ordre de dépendence:
+	
 	1 : JD : Le calcul du jour Julien, indispensable pour le calcul des ephemerides des planetes qui en suit.
+	
 	2 : GreenwichPosition : Calcul la position des planetes en partant de la longitude , latitude Radius vector fourni par les class du package : PlanetaryData. Les calculs des éphémérides des planetes prend en compte l'abberation et la nutation.
+	
 	3 : LocalPosition : Calcul de la positions des planetes  selon le lieu d'observation, en  partant des valeurs (RA, DEC) calculer dans la class GreenwishPosition.
+	
 	4 : Main : Run
 
 ## Run
@@ -39,12 +57,8 @@ Par default le calcul des positions des planetes est rapporté au lieu d'obervat
 ```
 double longitude_Ville = 0.340375; //Longitude geographique de Poitiers en degres decimaux
 
-```
-```
 double latitude_Ville = 46.580224; // Latitude geographique de Poitiers en degres decimaux
 
-```
-```
 double hauteur_Ville = 65; // Hauteur(altitude) de poitiers en mètres
 
 ```
