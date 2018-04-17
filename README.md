@@ -8,34 +8,34 @@ PlanetaryEphemeris calcul les éphémérides des planetes en prenant en compte l
 
 * -Package Calcul 
 
-   |- JD ( Calcul du Jour Julien ) 
+      |- JD ( Calcul du Jour Julien ) 
 
-   |- GreenwichPosition ( Calcul des ephemerides des planetes rapporté à Greenwich ) 
+      |- GreenwichPosition ( Calcul des ephemerides des planetes rapporté à Greenwich ) 
 
-   |- LocalPosition ( Calcul des éphemrides des planetes rapporté à la position local (lieu d'observation) )
+      |- LocalPosition ( Calcul des éphemrides des planetes rapporté à la position local (lieu d'observation) )
 
-   |- Main ( Execute le calcul )
+      |- Main ( Execute le calcul )
 
 
 * -Package PlanetartyData
 
-   |- Earth
+      |- Earth
 
-   |- Jupiter
+      |- Jupiter
+   
+      |- Mars
 
-   |- Mars
+      |- Mercury
 
-   |- Mercury
+      |- Moon
 
-   |- Moon
+      |- Neptune
 
-   |- Neptune
+      |- Saturn
 
-   |- Saturn
+      |- Uranus
 
-   |- Uranus
-
-   |- Venus
+      |- Venus
 
 ## More information about files
 Folder dans l'ordre de dépendence:
