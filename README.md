@@ -1,7 +1,7 @@
 # PlanetaryEphemeris
 
 
-PlanetaryEphemeris calcul les éphémérides des planetes en prenant en compte l'aberation.
+PlanetaryEphemeris calcul les éphémérides (positions) des planetes en prenant en compte l'aberation et la nutation. Calcul des éphémerides des planetes rapporté à Greenwich et au lieu de l'obersvation. 
 
 
 ### Folder architecture
@@ -79,5 +79,8 @@ Si vous voulez les ephémérides d'une autres planetes, il vous suffit de rempla
 ## Acknowledgments
 
 * [AstroSurf]( http://www.astrosurf.com/topic/114897-help-%C3%A9ph%C3%A9m%C3%A9rides-des-plan%C3%A8tes/ )
+* Théorie ELP2000 -> Données de la Lune
+* Théorie vsop87 -> Données des autres planetes
+
 
 
