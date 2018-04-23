@@ -4,7 +4,8 @@ package Calcul;
  *  Les calculs des éphémérides des planetes ci-dessous prend en compte l'abberation,  la nutation et la position local d'observation   */
 public class LocalPosition extends GreenwichPosition {
 
-	public LocalPosition(String demande, double longitude_Ville, double latitude_Ville, double hauteur_Ville) {
+
+	public LocalPosition(String demande ,double longitude_Ville, double latitude_Ville, double hauteur_Ville) {
 		super(demande);
 
 		/* position de la planete a greenwish */
@@ -22,10 +23,10 @@ public class LocalPosition extends GreenwichPosition {
 		double pi = Parallaxe_horizontal(R_ua);
 
 		/* chapitre 7 angle horaire geocentreique (h) */
-		double TSM = Ang_Horaire_Geo(2458086.5, JD);
+		double TSM = Ang_Horaire_Geo( JD_5 , JD);
 		TSM = VerifDegres(TSM);
 
-		double tparallaxe = tparallaxe(JD);
+		double tparallaxe = tSideral(JD);
 
 		/* longitude geocentrique moyenne du soleil ( L0) */
 		double L0 = L0(JD);
@@ -101,7 +102,7 @@ public class LocalPosition extends GreenwichPosition {
 
 	}
 
-	// num --> hexa
+    // num --> hexa
 	static String hexa(double num) {
 		String hexa = (Integer.toHexString((int) num));
 		hexa = hexa.toUpperCase();
