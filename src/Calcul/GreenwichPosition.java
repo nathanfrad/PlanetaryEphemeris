@@ -21,6 +21,8 @@ public class GreenwichPosition extends JD {
 
 	protected double tTL;
 
+	protected double omega, L0, LLune, M, MLune ;
+
 	public GreenwichPosition(String demande) {
 		super();
 		/* On affiche les resultats de class que nous étendons : JD.java */
@@ -177,7 +179,7 @@ public class GreenwichPosition extends JD {
 		System.out.println("	Planète " + demande + "  : λ1 = " + longitude_deg + "°  β1 = " + latitude_deg
 				+ "°  ρ1 = " + R1 + "° ");
 
-		double tparallaxe = tparallaxe(JDD); // t est le t de base
+		double tparallaxe = tSideral(JD_5); // t est le t de base
 
 		/* ******** l'exentricité de le l'orbite de la terre (e) ********** */
 		double e = exentricite(tparallaxe);
@@ -375,15 +377,15 @@ public class GreenwichPosition extends JD {
 	}
 
 	/* obliquité moyenne ( qui est non utilisé dans mon cas ) */
-	static double ObliquitM(double t) { // tparallaxe
+	static double ObliquitM(double t) { // tSideral
 		double ObliquitM = (23 + 26 / 60 + 21.448 / 3600) - (46.8150 / 3600) * t - (0.00059 / 3600) * (t * t)
 				+ (0.001813 / 3600) * (t * t * t);
 		return ObliquitM;
 	}
 
-	/* Temps universel */
-	static double tparallaxe(double JD) {
-		double t = ((JD - 2451545.0) / 36525);
+	/* Temps sideral a greenwich a 0h UT pour une date donné. JD doit se terminer par 0.5 , on prend en compte que la date et non lheure  */
+	static double tSideral(double JD_5) {
+		double t = ((JD_5 - 2451545.0) / 36525);
 		return t;
 	}
 
